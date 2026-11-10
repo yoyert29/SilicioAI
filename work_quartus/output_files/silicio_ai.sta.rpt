@@ -1,5 +1,5 @@
 Timing Analyzer report for silicio_ai
-Tue Nov 10 15:42:09 2026
+Tue Nov 10 17:05:52 2026
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 
 
@@ -87,12 +87,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 24          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.05        ;
+; Average used               ; 1.07        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.3%      ;
+;     Processors 2-16        ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -333,7 +333,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
-    Info: Processing started: Tue Nov 10 15:42:08 2026
+    Info: Processing started: Tue Nov 10 17:05:51 2026
 Info: Command: quartus_sta silicio_ai -c silicio_ai
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -381,8 +381,8 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4962 megabytes
-    Info: Processing ended: Tue Nov 10 15:42:09 2026
+    Info: Peak virtual memory: 4963 megabytes
+    Info: Processing ended: Tue Nov 10 17:05:52 2026
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 

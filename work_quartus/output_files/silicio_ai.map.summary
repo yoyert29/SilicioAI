@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Successful - Tue Nov 10 15:41:57 2026
+Analysis & Synthesis Status : Successful - Tue Nov 10 17:05:39 2026
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 Revision Name : silicio_ai
-Top-level Entity Name : silicio_ai
+Top-level Entity Name : silicio_ai_top
 Family : Cyclone IV E
 Total logic elements : 0
     Total combinational functions : 0

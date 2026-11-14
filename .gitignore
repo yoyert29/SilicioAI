@@ -1,0 +1,38 @@
+# ---- Quartus: generated on every compile, rebuilt from the sources ----
+work_quartus/db/
+work_quartus/incremental_db/
+work_quartus/output_files/
+work_quartus/greybox_tmp/
+work_quartus/simulation/
+work_quartus/*.qws
+*.bak
+*.rpt
+*.summary
+*.smsg
+*.done
+*.jdi
+*.sld
+*.pin
+*.qarlog
+*.qar
+c5_pin_model_dump.txt
+PLLJ_PLLSPE_INFO.txt
+
+# Questa / ModelSim simulation output
+work/
+*.wlf
+transcript
+vsim*.wlf
+modelsim.ini
+
+# ---- Python ----
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# ---- OS / editors ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/

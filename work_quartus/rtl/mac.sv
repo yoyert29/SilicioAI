@@ -1,17 +1,17 @@
 //MAC is the heart of the accelerator
 // We already know how the neuron computes. The mac does that one product per clock.
 
-`default_nettype none // Esto es necesario?
+`default_nettype none // Esto es necesario solaente para evitar errores al crear cables. Typo protection
 
 
 module mac (
-	input logic clk,
-	input logic rst_n, // Active low
-	input logic load, // Bias
-	input logic en, 
-	input logic signed [31:0] bias,
-	input logic signed [7:0] x,
-	input logic signed [7:0] w,
+	input wire logic clk,
+	input wire logic rst_n, // Active low
+	input wire logic load, // Bias
+	input wire logic en, 
+	input wire logic signed [31:0] bias,
+	input wire logic signed [7:0] x,
+	input wire logic signed [7:0] w,
 	output logic signed [31:0] acc
 );
 
@@ -26,7 +26,7 @@ module mac (
 	end 
 
 
-
+// load wins over en: load starts a new neuron, so a product in that same cycle belongs to the previous one.
 
 endmodule
 

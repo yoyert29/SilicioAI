@@ -1,0 +1,96 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11f MIXED_VERSIONS
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/martinezmur/Documents/DigitalSystems/SilicioAI/work_quartus/sim
+T_opt
+!s110 1794711527
+VAo410S0m_jgg51YM;3;:i3
+04 10 4 work tb_requant fast 0
+=1-cc96e52042c1-6af91fe7-2f-7218
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+R0
+Xnn_params_pkg
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1794711642
+!i10b 1
+!s100 G^0Bl5b8Ibl>kE@kZOVc@2
+I?^QI04QC71mDH4jdeK>jz1
+S1
+R0
+w1794684824
+8C:/Users/martinezmur/Documents/DigitalSystems/SilicioAI/work_python/training_Python/out/nn_params_pkg.sv
+FC:/Users/martinezmur/Documents/DigitalSystems/SilicioAI/work_python/training_Python/out/nn_params_pkg.sv
+!i122 3
+L0 2 0
+V?^QI04QC71mDH4jdeK>jz1
+Z4 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z5 !s108 1794711642.000000
+!s107 tb_requant.sv|../rtl/requant.sv|C:/Users/martinezmur/Documents/DigitalSystems/SilicioAI/work_python/training_Python/out/nn_params_pkg.sv|
+Z6 !s90 -reportprogress|300|-sv|C:/Users/martinezmur/Documents/DigitalSystems/SilicioAI/work_python/training_Python/out/nn_params_pkg.sv|../rtl/requant.sv|tb_requant.sv|
+!i113 0
+Z7 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vrequant
+R2
+Z8 DXx4 work 13 nn_params_pkg 0 22 ?^QI04QC71mDH4jdeK>jz1
+R3
+!i10b 1
+!s100 4j7MUNA0e`UkhVWVNX`lz3
+IVN]AYcGPWRRc?VLWLo2US2
+S1
+R0
+w1794711490
+8../rtl/requant.sv
+F../rtl/requant.sv
+!i122 3
+L0 3 13
+Z9 VDg1SIo80bB@j0V0VzS_@n1
+R4
+r1
+!s85 0
+31
+R5
+Z10 !s107 tb_requant.sv|../rtl/requant.sv|C:/Users/martinezmur/Documents/DigitalSystems/SilicioAI/work_python/training_Python/out/nn_params_pkg.sv|
+R6
+!i113 0
+R7
+R1
+vtb_requant
+R2
+R8
+R3
+!i10b 1
+!s100 o_M@AG]?9Bh6[A[CIeH[V2
+I`_jTlJ:72HCXTilVPokL;2
+S1
+R0
+w1794710723
+8tb_requant.sv
+Ftb_requant.sv
+!i122 3
+L0 7 71
+R9
+R4
+r1
+!s85 0
+31
+R5
+R10
+R6
+!i113 0
+R7
+R1

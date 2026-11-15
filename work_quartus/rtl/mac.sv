@@ -20,9 +20,14 @@ module mac (
 	
 	always_ff @(posedge clk or negedge rst_n)
 	begin
-		if (!rst_n)    	acc <= '0;
-		else if (load) 	acc <= bias;
-		else if (en)   	acc <= acc + product;
+		if (!rst_n)    	
+			acc <= '0;
+			
+		else if (load) 	
+			acc <= bias;
+			
+		else if (en)   	
+			acc <= acc + product;
 	end 
 
 

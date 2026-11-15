@@ -1,4 +1,4 @@
-// THIS IS NOT FINISHED YET 
+// THIS IS NOT FINISHED YET: Simulation is missing
 
 
 `default_nettype none
@@ -16,8 +16,7 @@ module argmax(
 
 typedef enum logic [1:0] {
 	idle,
-	counting,
-	done
+	counting
 } statetype;
 
 statetype current_state, next_state;
@@ -34,6 +33,9 @@ logic [3:0] next_digit_max;
 logic signed [31:0] acc2_max;
 logic signed [31:0] next_acc2_max;
 
+logic valid_out_flag; 
+logic next_valid_out_flag; 
+
 
 
 always_ff @(posedge clk, negedge reset_L) begin
@@ -42,6 +44,7 @@ always_ff @(posedge clk, negedge reset_L) begin
 		current_state <= idle;
 		digit_max <= 0;
 		acc2_max <= 32'h8000_0000;
+		valid_out_flag <= 0;
 		
 		for(int i = 0; i <= 9; i++) 
 			acc2_buffer[i] <= 0;
@@ -52,6 +55,7 @@ always_ff @(posedge clk, negedge reset_L) begin
 		digit_max <= next_digit_max;
 		acc2_max <= next_acc2_max;
 		acc2_buffer <= next_acc2_buffer;	
+		valid_out_flag <= next_valid_out_flag;
 	end
 end
 
@@ -61,11 +65,21 @@ always_comb begin
 	next_digit_max = digit_max;
 	next_acc2_buffer = acc2_buffer;
 	next_acc2_max = acc2_max;
+	next_valid_out_flag = valid_out_flag;
 	
 	case(current_state)
 		idle: begin		
-			if (start == 1)
+			if (start == 1) begin
 				next_state = counting;
+				next_valid_out_flag = 0; 
+				next_counter = 0;
+				next_digit_max = 0;
+				
+				for(int i = 0; i <= 9; i++)
+					next_acc2_buffer[i] = 0;
+					
+				next_acc2_max = 32'h8000_0000;
+			end
 				
 		end
 		
@@ -80,20 +94,20 @@ always_comb begin
 				next_counter = counter + 1; 
 				
 					
-				if (counter == 9)
-					next_state = done;	
+				if (counter == 9) begin
+					next_state = idle;
+					next_valid_out_flag = 1;
+				end
+				
 			end
 		end
 		
-		done: begin
-			
-		end
 	endcase
 	
 end
 
 assign digit = digit_max;
-assign valid_out = (current_state == done);
+assign valid_out = valid_out_flag;
 
 endmodule
 
